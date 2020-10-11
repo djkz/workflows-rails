@@ -6,8 +6,9 @@ module ActionHelper
         params: params.merge({ exec: exec }),
       },
       remote: true,
-      form: {
-        "data-type" => "js",
+      data: {
+        disable_with: label,
+        type: "js",
       },
     )
   end
