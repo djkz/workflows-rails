@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Stim</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <header>
+    <%= link_to "Store", store_index_path %>
+    <%= link_to "Library", library_index_path %>
+    <% if signed_in? %>
+    <% form_builder(@logout) do |f| %><% end %>
+    <% end %>
+  </header>
+  <%= yield %>
+</body>
+
+</html>

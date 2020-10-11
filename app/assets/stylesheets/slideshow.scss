@@ -1,0 +1,9 @@
+.slide {
+  display: none;
+  font-size: 48px;
+  margin-top: 10px;
+}
+
+.slide.slide--current {
+  display: block;
+}
