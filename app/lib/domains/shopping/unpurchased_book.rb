@@ -1,5 +1,5 @@
 module Domains
-  module Store
+  module Shopping
     class UnpurchasedBook < Book
       include Domains::Display
 

@@ -1,5 +1,5 @@
 module Domains
-  module Store
+  module Shopping
     class PurchasedBook < Book
       attr_accessor :user
       include Domains::Display

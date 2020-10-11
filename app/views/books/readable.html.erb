@@ -1,0 +1,11 @@
+<h3> <%= @item.title %></h3>
+<div data-controller="pages" data-pages-index="1" data-pages-max="<%= @item.pages.count %>">
+  <p data-target="pages.page">
+    <span style="color: #d0d0d0">Loading book...</span>
+  </p>
+  <br>
+  <button data-action="pages#previous" data-target="pages.prev">Previous</button>
+  <button data-action="pages#next" data-target="pages.next">Next</button>
+</div>
+
+<br />

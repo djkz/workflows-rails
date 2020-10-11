@@ -1,5 +1,5 @@
 module Domains
-  module Store
+  module Shopping
     class Books
       attr_accessor :user
 

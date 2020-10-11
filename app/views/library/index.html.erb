@@ -1,8 +1,8 @@
 <h2>Library</h2>
 
-<h3>Browse Books</h3>
+<h3>Read Books</h3>
 <ul>
   <% @page.items.each do |book| %>
-  <li><%= link_to book.title, store_path(book.id) %></li>
+  <li><%= link_to book.title, library_path(book.id) %></li>
   <% end %>
 </ul>
