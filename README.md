@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The goal of this project is to experiment with a different code layout:
 
-Things you may want to cover:
+Instead of CRUD, we are focusing on our workflows and domains.
 
-* Ruby version
+* lib/workflows - workflows allow us to see all actions performed in the workflow, for example our store lets us browse, view, buy and refund books.
+* lib/domains - domains allow us to keep the models thin and give names to things that are specifically in that domain.
 
-* System dependencies
 
-* Configuration
+## get started
+Create a user model, and a couple of book models, then run `rails server`
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
