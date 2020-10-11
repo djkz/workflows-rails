@@ -1,5 +1,5 @@
 class HelloController < ApplicationController
   def login
-    @login = Services::Auth::Login.new
+    @login = Domains::Auth::Login.new
   end
 end

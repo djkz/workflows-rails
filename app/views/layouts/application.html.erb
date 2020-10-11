@@ -15,7 +15,7 @@
     <%= link_to "Store", store_index_path %>
     <%= link_to "Library", library_index_path %>
     <% if signed_in? %>
-    <% form_builder(@logout) do |f| %><% end %>
+      <%= action_button "Logout", "Auth::Logout" %>
     <% end %>
   </header>
   <%= yield %>

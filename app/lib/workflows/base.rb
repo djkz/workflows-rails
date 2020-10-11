@@ -1,9 +1,10 @@
 module Workflows
   class Base
-    attr_accessor :current_user, :id
+    attr_accessor :current_user, :cookies, :id
 
-    def initialize(params, user)
-      self.current_user = user
+    def initialize(params, options)
+      self.current_user = options[:user]
+      self.cookies = options[:cookies]
       self.id = params[:id]
       @params = params
     end

@@ -1,11 +1,8 @@
 module Workflows
   module Auth
-    class Login
-      def initialize(params, cookies)
-        cookies.signed[:current_user] = 1
-      end
-
+    class Login < Workflows::Base
       def run
+        cookies.signed[:current_user] = 1
         "window.location.reload()".html_safe
       end
     end

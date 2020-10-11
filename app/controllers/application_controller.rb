@@ -8,14 +8,14 @@ class ApplicationController < ActionController::Base
     name = params[:name]
     action = params[:id] ? "show" : "index"
 
-    @page = ("Workflows::#{name.to_s.capitalize}::#{action.capitalize}").constantize.new(params, current_user)
+    @page = ("Workflows::#{name.to_s.capitalize}::#{action.capitalize}").constantize.new(params, { user: current_user, cookies: cookies })
 
     render :template => "#{name}/#{action}"
   end
 
   def current_user
     id = cookies.signed[:current_user]
-    @current_user ||= User.find(id)
+    @current_user ||= User.find_by(id: id)
   end
 
   def signed_in?
@@ -23,6 +23,6 @@ class ApplicationController < ActionController::Base
   end
 
   def load_defaults
-    @logout = Services::Auth::Logout.new
+    @logout = Domains::Auth::Logout.new
   end
 end

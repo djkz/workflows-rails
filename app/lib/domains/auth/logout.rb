@@ -1,4 +1,4 @@
-module Services
+module Domains
   module Auth
     class Logout
       def label

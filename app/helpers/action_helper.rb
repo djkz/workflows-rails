@@ -1,5 +1,5 @@
 module ActionHelper
-  def action_button(label, exec, params)
+  def action_button(label, exec, params = {})
     button_to(
       label, {
         controller: "actions", action: "run",

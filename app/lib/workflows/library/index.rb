@@ -2,7 +2,7 @@ module Workflows
   module Library
     class Index < Base
       def items
-        Book.all
+        @books.all
       end
     end
   end

@@ -1,12 +1,10 @@
 module Workflows
   module Auth
-    class Logout
-      def initialize(params, cookies)
-        cookies.delete :current_user
-      end
-
+    class Logout < Workflows::Base
       def run
-        "window.location.reload()".html_safe
+        cookies.delete :current_user
+
+        "window.location.href = '/'".html_safe
       end
     end
   end

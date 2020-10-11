@@ -1,4 +1,4 @@
-module Services
+module Domains
   module Auth
     class Login
       attr_accessor :email, :password
